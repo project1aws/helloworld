@@ -1,0 +1,8 @@
+#BASE IMAGES
+FROM node:7
+
+#Maintainer
+MAINTAINER Rahul Varghese
+
+# TELL DOCKER WHAT PORT TO EXPOSE 
+EXPOSE 3000
