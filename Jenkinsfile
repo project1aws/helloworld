@@ -4,7 +4,7 @@ node{
       checkout scm
     }
     stage ('build'){
-      app = docker.build("rvarg11/project1-helloworld")
+      app = docker.build('rvarg11/project1-helloworld')
     }
     stage ('test'){
       app.inside {
@@ -14,7 +14,7 @@ node{
     stage ('Push Image'){
       docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
       app.push("latest")
-      app.push("${env.BUILDNUMBER}")
+      app.push("${env.BUILD_NUMBER}")
       }
     }
 }
