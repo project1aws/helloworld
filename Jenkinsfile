@@ -16,5 +16,4 @@ node{
       docker.push("latest")
       docker.push("${env.BUILDNUMBER}")
       }
-    }
 }
